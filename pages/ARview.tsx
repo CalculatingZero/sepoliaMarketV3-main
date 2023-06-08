@@ -45,7 +45,7 @@ function Image() {
   //   <Image href={`https://nft-cdn.alchemy.com/eth-mainnet/c806cf7602f6ae0904205eef212e2c2a`} />
   // </mesh>
     <mesh>
-      <planeBufferGeometry attach="geometry" args={[5, 5]} />
+      <planeBufferGeometry attach="geometry" args={[1, 1]} />
       <meshBasicMaterial attach="material" map={texture} />
     </mesh>
   
