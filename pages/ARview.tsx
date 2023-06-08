@@ -68,7 +68,7 @@ export default function ARview() {
        </Canvas> */}
        <ARButton />
 
-        <Canvas colorManagement>
+        <Canvas>
             <XR>
                 <Suspense fallback={null}>
                     <Image />
