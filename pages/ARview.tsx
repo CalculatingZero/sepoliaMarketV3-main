@@ -55,7 +55,7 @@ function Image() {
 export default function ARview() {
   return (
 
-    <Container maxWidth="lg" maxHeight="100%">
+    <Container maxWidth="lg">
       <Navbar/>
       {/* <ARButton />
          <Canvas>
