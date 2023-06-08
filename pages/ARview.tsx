@@ -1,22 +1,24 @@
 /* eslint-disable */
 import * as THREE from 'three';
 import * as React from 'react';
-import { useRef, useState } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { useRef, useState, Suspense } from 'react';
+import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { ARButton, XR } from '@react-three/xr'
 import { Navbar } from "../components/Navbar/Navbar";
 import Container from "../components/Container/Container";
 import { ComponentProps } from 'react';
 import { useCursor} from '@react-three/drei';
-import Image from "next/image";
 
-function Box(props: JSX.IntrinsicElements['mesh']) {
+function Image() {
+    var img = "/slideshow/joffee.png";
+    const texture = useLoader(THREE.TextureLoader, img)
+// function Box(props: JSX.IntrinsicElements['mesh']) {
   // // This reference will give us direct access to the THREE.Mesh object
   // const ref = useRef<THREE.Mesh>(null!)
   // const name = useRef<string>(null!)
   // // Hold state for hovered and clicked events
   // const [hovered, hover] = useState(false)
-  // const [clicked, click] = useState(false)
+  // const [clicked, click] = useState(false) 
   // // Rotate mesh every frame, this is outside of React without overhead
   // useFrame((state, delta) => (ref.current.rotation.x += 0.01))
 
@@ -42,7 +44,10 @@ function Box(props: JSX.IntrinsicElements['mesh']) {
   //   <boxGeometry args={[1, 1, 1]} />
   //   <Image href={`https://nft-cdn.alchemy.com/eth-mainnet/c806cf7602f6ae0904205eef212e2c2a`} />
   // </mesh>
-
+    <mesh>
+      <planeBufferGeometry attach="geometry" args={[5, 5]} />
+      <meshBasicMaterial attach="material" map={texture} />
+    </mesh>
   
   )
 }
@@ -50,7 +55,7 @@ function Box(props: JSX.IntrinsicElements['mesh']) {
 export default function ARview() {
   return (
 
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" maxHeight="100%">
       <Navbar/>
       {/* <ARButton />
          <Canvas>
@@ -62,17 +67,15 @@ export default function ARview() {
          </XR>
        </Canvas> */}
        <ARButton />
-      
-        <Canvas>
-          <XR>
-            <ambientLight intensity={0.5} />
-            <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-            <pointLight position={[-10, -10, -10]} />
-            {/* {/* <Box position={[-5, 0, 0]} /> */}
-            <Box position={[5, 0, 0]} />
-            <Image url="https://nft-cdn.alchemy.com/eth-mainnet/c806cf7602f6ae0904205eef212e2c2a"/>
-          </XR>
+
+        <Canvas colorManagement>
+            <XR>
+                <Suspense fallback={null}>
+                    <Image />
+                </Suspense>
+            </XR>
         </Canvas>
+
        
     </Container>
 
