@@ -2,10 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.css";
 import {ETHERSCAN_URL, MARKETPLACE_ADDRESS, FOOTER_LOGO} from '../../const/contractAddresses';
+import { useRouter } from 'next/router';
 
 export default function Footer() {
+    const router = useRouter();
+    const excludeFooterPath = '/ARview';
+    const shouldRenderFooter = router.pathname !== excludeFooterPath;
 
-    return (
+    return shouldRenderFooter ? (
         <>
             <div className={styles.gridFooter}>
                 <div className={styles.logoFooterDiv}>
@@ -43,5 +47,5 @@ export default function Footer() {
             </div>
 
         </>
-    )
+    ): null;
 }
