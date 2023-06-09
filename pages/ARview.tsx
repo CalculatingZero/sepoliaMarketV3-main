@@ -32,10 +32,8 @@ export default function ARview() {
       <Suspense fallback={null}>
         <ARButton />
           <Canvas>
-              <XR>
-                  <Suspense fallback={null}>
-                      <Image />
-                  </Suspense>
+              <XR>  
+                <Image />
               </XR>
           </Canvas>
       </Suspense>
