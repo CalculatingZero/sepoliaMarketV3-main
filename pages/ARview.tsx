@@ -26,7 +26,7 @@ function Image() {
 export default function ARview() {
   return (
 
-    <Container maxWidth="lg">
+   <>
       <Navbar/>
      
       <Suspense fallback={null}>
@@ -39,7 +39,7 @@ export default function ARview() {
               </XR>
           </Canvas>
       </Suspense>
-    </Container>
+    </>
 
 
   )
