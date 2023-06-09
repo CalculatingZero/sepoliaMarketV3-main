@@ -29,14 +29,15 @@ export default function ARview() {
     <Container maxWidth="sm">
       <Navbar/>
      
-      <Suspense fallback={null}>
+      
         <ARButton />
+        <Suspense fallback={null}>
           <Canvas>
               <XR>  
                 <Image />
               </XR>
           </Canvas>
-      </Suspense>
+        </Suspense>
     </Container>
 
 
