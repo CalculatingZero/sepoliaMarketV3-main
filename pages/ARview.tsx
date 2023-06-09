@@ -26,7 +26,7 @@ function Image() {
 export default function ARview() {
   return (
 
-    <Container maxWidth="lg">
+    <Container maxWidth="sm">
       <Navbar/>
      
       <Suspense fallback={null}>
