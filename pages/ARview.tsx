@@ -16,7 +16,7 @@ function Image() {
   return (
 
     <mesh>
-      <planeGeometry attach="geometry" args={[3, 3]} />
+      <planeGeometry attach="geometry" args={[1, 1]} />
       <meshBasicMaterial attach="material" map={texture} />
     </mesh>
   
