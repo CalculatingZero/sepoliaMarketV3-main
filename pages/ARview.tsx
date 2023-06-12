@@ -12,12 +12,7 @@ import { useCursor} from '@react-three/drei';
 function Image() {
     var img = "/slideshow/joffee.png";
     const texture = useLoader(THREE.TextureLoader, img);
-    const ref = React.useRef();
 
-    // Set the initial viewing angle at 45 degrees
-    React.useEffect(() => {
-      ref.current.rotation.x = 0.785;
-    }, []);
   return (
     <mesh>
       <planeGeometry attach="geometry" args={[1, 1]} />

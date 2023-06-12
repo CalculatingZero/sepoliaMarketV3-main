@@ -1,7 +1,7 @@
 /* eslint-disable */
 import * as THREE from 'three';
-// import * as React from 'react';
-import React, { useRef, useState, Suspense } from 'react';
+import * as React from 'react';
+import { useRef, useState, Suspense } from 'react';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { ARButton, XR } from '@react-three/xr'
 import { Navbar } from "../../../../components/Navbar/Navbar";
@@ -25,13 +25,14 @@ import {
 } from "../../../../const/contractAddresses";
 import Link from "next/link";
 import toast, { Toaster } from "react-hot-toast";
+import toastStyle from "../../../../util/toastConfig";
 
 function Image() {
     const router = useRouter();
     const img = router.query.image as string;
     console.log(img)
     const texture = useLoader(THREE.TextureLoader, img);
-    const ref = React.useRef();
+    const ref = React.useRef<THREE.Mesh>(null!);
 
 
     // Set the initial viewing angle at 45 degrees
@@ -41,7 +42,7 @@ function Image() {
       }
     }, []);
   return (
-    <mesh>
+    <mesh ref={ref}>
       <planeGeometry attach="geometry" args={[1, 1]} />
       <meshBasicMaterial attach="material" map={texture} />
     </mesh>
