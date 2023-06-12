@@ -38,7 +38,7 @@ function Image() {
     // Set the initial viewing angle at 45 degrees
     React.useEffect(() => {
       if (ref.current) {
-      ref.current.rotation.x = 0.785;
+      ref.current.rotation.x = -0.785;
       }
     }, []);
   return (
