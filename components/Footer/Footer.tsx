@@ -7,7 +7,9 @@ import { useRouter } from 'next/router';
 export default function Footer() {
     const router = useRouter();
     const excludeFooterPath = '/ARview';
-    const shouldRenderFooter = router.pathname !== excludeFooterPath;
+    const isDgPath = router.asPath.includes('digitalgraffiti');
+
+    const shouldRenderFooter = router.pathname !== excludeFooterPath && !isDgPath;
 
     return shouldRenderFooter ? (
         <>

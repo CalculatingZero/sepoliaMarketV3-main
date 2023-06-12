@@ -301,26 +301,26 @@ export default function TokenPage() {
               onUnmount = {onUnmount}
               options={{ mapId: "9acd4f3c1c3df605" }}
             >
-              {nft &&
-              <MarkerF
-              icon={{
-                url: nft.media[0].gateway,
-                scaledSize: new window.google.maps.Size(50, 50), // scaled size
-                origin: new window.google.maps.Point(0, 0), // origin
-                anchor: new window.google.maps.Point(0, 32) // anchor
-              }}
-              position={location}
-              onClick={() => {setSelectedMarker(location)}}
-              >
-                {selectedMarker && (<InfoWindow
+                {nft &&
+                <MarkerF
+                icon={{
+                  url: nft.media[0].gateway,
+                  scaledSize: new window.google.maps.Size(50, 50), // scaled size
+                  origin: new window.google.maps.Point(0, 0), // origin
+                  anchor: new window.google.maps.Point(0, 32) // anchor
+                }}
                 position={location}
-                onCloseClick={() => {setSelectedMarker(null)}}>
-                    <div className={styles.black}>
-                    {content}
-                    </div>
-                </InfoWindow>)}
-              </MarkerF>
-              }
+                onClick={() => {setSelectedMarker(location)}}
+                >
+                  {selectedMarker && (<InfoWindow
+                  position={location}
+                  onCloseClick={() => {setSelectedMarker(null)}}>
+                      <div className={styles.black}>
+                      {content}
+                      </div>
+                  </InfoWindow>)}
+                </MarkerF>
+                }
             </GoogleMap>
         }
         {nft?.metadata?.centerpoint && 

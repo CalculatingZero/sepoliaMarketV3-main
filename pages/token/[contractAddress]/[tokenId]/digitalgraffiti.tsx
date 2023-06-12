@@ -91,45 +91,45 @@ export default function ARview() {
       }
   return (
     <div>
-    <Container maxWidth="lg">
       <Toaster position="bottom-center" reverseOrder={false} />
-      <Navbar/>
-        <ARButton />
-        <Suspense fallback={null}>
-          <Canvas>  
-            <ambientLight intensity={0.5} />
-            <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-            <pointLight position={[-10, -10, -10]} />
-              <XR>  
-                <Image />
-              </XR>
-          </Canvas>
-        </Suspense>
-        {loadingContract || loadingDirect || loadingAuction ? (
-            <Skeleton width="100%" height="164" />
-        ) : (
-            <Web3Button
-                contractAddress={MARKETPLACE_ADDRESS}
-                action={async () => await buyListing()}
-                onSuccess={() => {
-                toast(`Purchase success!`, {
-                    icon: "✅",
-                    style: toastStyle,
-                    position: "bottom-center",
-                });
-                }}
-                onError={(e) => {
-                toast(`Purchase failed! Reason: ${e.message}`, {
-                    icon: "❌",
-                    style: toastStyle,
-                    position: "bottom-center",
-                });
-                }}
-            >
-                Buy at asking price
-            </Web3Button>)}
-            <Link href={`/token/${NFT_COLLECTION_ADDRESS}/${tokenID}`}/>
-    </Container>
+      <Container maxWidth="lg">
+        <Navbar/>
+          <ARButton />
+          <Suspense fallback={null}>
+            <Canvas>  
+              <ambientLight intensity={0.5} />
+              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+              <pointLight position={[-10, -10, -10]} />
+                <XR>  
+                  <Image />
+                </XR>
+            </Canvas>
+          </Suspense>
+          {loadingContract || loadingDirect || loadingAuction ? (
+              <Skeleton width="100%" height="164" />
+          ) : (
+              <Web3Button
+                  contractAddress={MARKETPLACE_ADDRESS}
+                  action={async () => await buyListing()}
+                  onSuccess={() => {
+                  toast(`Purchase success!`, {
+                      icon: "✅",
+                      style: toastStyle,
+                      position: "bottom-center",
+                  });
+                  }}
+                  onError={(e) => {
+                  toast(`Purchase failed! Reason: ${e.message}`, {
+                      icon: "❌",
+                      style: toastStyle,
+                      position: "bottom-center",
+                  });
+                  }}
+              >
+                  Buy at asking price
+              </Web3Button>)}
+              <Link href={`/token/${NFT_COLLECTION_ADDRESS}/${tokenID}`}>Back</Link>
+      </Container>
     </div>
   )
 }
