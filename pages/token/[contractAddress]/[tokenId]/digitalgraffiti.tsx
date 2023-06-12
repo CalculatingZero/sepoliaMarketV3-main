@@ -5,7 +5,7 @@ import { useRef, useState, Suspense } from 'react';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { ARButton, XR } from '@react-three/xr'
 import { Navbar } from "../../../../components/Navbar/Navbar";
-import Container from "../../../../components/Container/Container";
+import ContainerAR from "../../../../components/Container/ContainerAR";
 import { ComponentProps } from 'react';
 import { useCursor} from '@react-three/drei';
 import { useRouter } from "next/router";
@@ -92,7 +92,7 @@ export default function ARview() {
   return (
     <div>
       <Toaster position="bottom-center" reverseOrder={false} />
-      <Container maxWidth="lg">
+      <ContainerAR maxWidth="lg">
         <Navbar/>
           <ARButton />
           <Suspense fallback={null}>
@@ -129,7 +129,7 @@ export default function ARview() {
                   Buy at asking price
               </Web3Button>)}
               <Link href={`/token/${NFT_COLLECTION_ADDRESS}/${tokenID}`}>Back</Link>
-      </Container>
+      </ContainerAR>
     </div>
   )
 }
