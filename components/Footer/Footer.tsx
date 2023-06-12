@@ -8,6 +8,8 @@ export default function Footer() {
     const router = useRouter();
     const excludeFooterPath = '/ARview';
     const shouldRenderFooter = router.pathname !== excludeFooterPath;
+    const excludeFooterPath2 = '/../../../digitalgraffiti';
+    const shouldRenderFooter2 = router.pathname !== excludeFooterPath2;
 
     return shouldRenderFooter ? (
         <>
