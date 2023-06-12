@@ -52,7 +52,7 @@ export default function ARview() {
   const router = useRouter(); 
   const NFT_COLLECTION_ADDRESS = router.query.contractAddress as string;
   const tokenID = router.query.tokenId as string;
-
+  
     // Connect to marketplace smart contract
     const { contract: marketplace, isLoading: loadingContract } = useContract(
       MARKETPLACE_ADDRESS,
@@ -91,6 +91,7 @@ export default function ARview() {
   return (
 
     <Container maxWidth="lg">
+      <Toaster position="bottom-center" reverseOrder={false} />
       <Navbar/>
         <ARButton />
         <Suspense fallback={null}>
