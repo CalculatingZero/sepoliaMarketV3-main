@@ -90,7 +90,7 @@ export default function ARview() {
       return txResult;
       }
   return (
-
+    <div>
     <Container maxWidth="lg">
       <Toaster position="bottom-center" reverseOrder={false} />
       <Navbar/>
@@ -130,5 +130,6 @@ export default function ARview() {
             </Web3Button>)}
             <Link href={`/token/${NFT_COLLECTION_ADDRESS}/${tokenID}`}/>
     </Container>
+    </div>
   )
 }

@@ -288,7 +288,7 @@ export default function TokenPage() {
 
 
   return (
-    <>
+     <>
       <Toaster position="bottom-center" reverseOrder={false} />
       <Container maxWidth="lg">
         <Navbar/>
