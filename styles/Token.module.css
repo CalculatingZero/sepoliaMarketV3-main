@@ -329,6 +329,30 @@
   border: 1px solid white;
 }
 
+.enterAR{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: orange !important;;
+  color: #333 !important;
+  border-color: rgb(255, 255, 255);
+  padding: 6px 16px;
+  margin: 10px 10px;
+  border: 1px solid #333;
+  border-radius: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.15s ease-in-out 0s;
+}
+
+.enterAR:hover {
+  cursor: pointer;
+  background: burlywood!important;
+  border-color: rgb(255, 255, 255);
+  color: white;
+  border: 1px solid white;
+}
+
 .newLine{
   white-space: pre-line;
 }
