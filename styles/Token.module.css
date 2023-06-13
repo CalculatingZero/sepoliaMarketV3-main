@@ -299,6 +299,36 @@
   border: 1px solid white;
 }
 
+.mixedButtons{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.mixedReality{
+  align-items: center;
+  justify-content: center;
+  background: orange !important;
+  color: #333 !important;
+  border-color: rgb(255, 255, 255);
+  padding: 30px 16px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.15s ease-in-out 0s;
+
+}
+
+.mixedReality:hover {
+  cursor: pointer;
+  background: burlywood!important;
+  border-color: rgb(255, 255, 255);
+  color: white;
+  border: 1px solid white;
+}
+
 .newLine{
   white-space: pre-line;
 }

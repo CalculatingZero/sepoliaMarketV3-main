@@ -26,6 +26,7 @@ import {
 import Link from "next/link";
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../../../../util/toastConfig";
+import styles from "../../../../styles/Token.module.css";
 
 function Image() {
     const router = useRouter();
@@ -94,18 +95,9 @@ export default function ARview() {
       <Toaster position="bottom-center" reverseOrder={false} />
       <ContainerAR maxWidth="lg">
         <Navbar/>
-          <ARButton />
-          <Suspense fallback={null}>
-            <Canvas>  
-              <ambientLight intensity={0.5} />
-              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-              <pointLight position={[-10, -10, -10]} />
-                <XR>  
-                  <Image />
-                </XR>
-            </Canvas>
-          </Suspense>
-          {loadingContract || loadingDirect || loadingAuction ? (
+        <div className={styles.mixedButtons}>
+        <Link className={styles.mixedReality} href={`/token/${NFT_COLLECTION_ADDRESS}/${tokenID}`}>Back</Link>
+        {loadingContract || loadingDirect || loadingAuction ? (
               <Skeleton width="100%" height="164" />
           ) : (
               <Web3Button
@@ -128,7 +120,18 @@ export default function ARview() {
               >
                   Buy at asking price
               </Web3Button>)}
-              <Link href={`/token/${NFT_COLLECTION_ADDRESS}/${tokenID}`}>Back</Link>
+            </div>
+          <ARButton />
+          <Suspense fallback={null}>
+            <Canvas>  
+              <ambientLight intensity={0.5} />
+              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+              <pointLight position={[-10, -10, -10]} />
+                <XR>  
+                  <Image />
+                </XR>
+            </Canvas>
+          </Suspense>    
       </ContainerAR>
     </div>
   )

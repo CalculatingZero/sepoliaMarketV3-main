@@ -325,7 +325,7 @@ export default function TokenPage() {
         }
         {nft?.metadata?.centerpoint && 
         <div>
-          <Link href={`/token/${NFT_COLLECTION_ADDRESS}/${tokenID}/digitalgraffiti?image=${encodeURIComponent(nft.media[0].gateway)}`}>Mixed Reality</Link>
+          <Link className={styles.mixedReality} href={`/token/${NFT_COLLECTION_ADDRESS}/${tokenID}/digitalgraffiti?image=${encodeURIComponent(nft.media[0].gateway)}`}>Mixed Reality</Link>
         </div>
         }
         <div className={styles.container}>
