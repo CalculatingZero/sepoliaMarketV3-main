@@ -561,16 +561,6 @@ export function Slideshow(){
                     className = {slideStyles.imageStyle}
                   />
                 </Link>
-
-                <Link href={`/collection/${SLIDE_6}`}>
-                  <Image
-                    src={SLIDE_6_IMG}
-                    width={250}
-                    height={250}
-                    alt="Market gm ☕️"
-                    className = {slideStyles.imageStyle}
-                  />
-                </Link>
                 
             </div>
 
@@ -584,17 +574,7 @@ export function Slideshow(){
                     className = {slideStyles.imageStyle}
                   />
                 </Link>
-
-                  <Link href={`/collection/${SLIDE_7}`}>
-                  <Image
-                    src={SLIDE_7_IMG}
-                    width={250}
-                    height={250}
-                    alt="Market gm ☕️"
-                    className = {slideStyles.imageStyle}
-                  />
-                </Link>
-                
+             
             </div>
 
             <div id="mySlides4" className={slideStyles.mySlides4}>

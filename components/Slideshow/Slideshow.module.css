@@ -68,16 +68,16 @@
   
   @media screen and (min-width: 1500px) and (max-width: 100000px) {
     .slide2 {
-      content-visibility: hidden;
+      display:none;
     }
     .slide3 {
-      content-visibility: hidden;
+      display:none;
     }
     .slide4 {
-      content-visibility: hidden;
+      display:none;
     }
     .marketMobile {
-      content-visibility: hidden;
+      display:none;
     }
     .imgMobile {
       display: none;
@@ -101,7 +101,7 @@
   
   @media screen and (min-width: 1200px) and (max-width: 1500px) {
     .slide2 {
-      content-visibility: visible;
+      display:block;
     }
     .slide3 {
       display: none;
@@ -131,7 +131,7 @@
       display: none;
     }
     .slide3 {
-      content-visibility: visible;
+      display:block;
     }
     .slide4 {
       display: none;
@@ -161,10 +161,10 @@
       display: none;
     }
     .slide4 {
-      content-visibility: visible;
+      display:block;
     }
     .slideshowContainer {
-      max-width: 340px;
+      max-width: 314px;
     }
     .editorChoice{
       max-width: 340px;

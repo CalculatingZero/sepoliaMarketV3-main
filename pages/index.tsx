@@ -118,14 +118,11 @@ const fetchNFTs = async() => {
             <div className={styles.heroBody}>
               <h1 className={styles.heroTitle}>
                 <span className={styles.heroTitleGradient}>
-                  sepolia - Market gm ☕️
+                  Market gm ☕️
                 </span>
               </h1>
-              <div className={styles.textCenter}>0.5% Platform Fee & <a className={styles.link} href="https://eips.ethereum.org/EIPS/eip-2981">EIP-2981</a> Royalties Honored</div>
-              <div className={styles.nftDetails}>Search, Collect, Sell & Experience Digital Art</div>   
             </div>
           </div>
-          <h1 className={styles.collectionViewTitle}>Editor&apos;s Choice</h1>
         </div>
         <Slideshow/>
       </div>

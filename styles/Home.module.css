@@ -30,7 +30,7 @@
 }
 
 .hero {
-  padding-bottom: 100px;
+  padding-bottom: 20px;
 }
 
 .heroBackground {
@@ -66,6 +66,7 @@
   margin: 24px auto 0;
   padding: 2em;
   overflow: hidden;
+  margin-bottom: 0px;
 }
 
 .heroAsset {
@@ -79,6 +80,7 @@
   padding: 0 32px;
   margin: 0 auto;
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .heroBody {
@@ -104,6 +106,7 @@
 .heroTitleGradient {
   padding-right: 12px;
   font-weight: 700;
+  font-size: Min(50vw, 32px);
 }
 
 .heroSubtitle {
@@ -495,6 +498,7 @@
       'collection collection collection collection';
     gap: 10px;
     padding: 10px;
+    margin-top: -50px;
   }
   
   .gridMarket > div {
