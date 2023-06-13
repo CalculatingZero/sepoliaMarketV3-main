@@ -304,28 +304,9 @@ export function Slideshow(){
                   />
                 </Link>
 
-                <Link href={`/collection/${SLIDE_6}`}>
-                  <Image
-                    src={SLIDE_6_IMG}
-                    width={250}
-                    height={250}
-                    alt="Market gm ☕️"
-                    className = {slideStyles.imageStyle}
-                  />
-                </Link>
               </div>
 
               <div id="mySlides2" className={slideStyles.mySlides2}>
-                  <Link href={`/collection/${SLIDE_7}`}>
-                  <Image
-                    src={SLIDE_7_IMG}
-                    width={250}
-                    height={250}
-                    alt="Market gm ☕️"
-                    className = {slideStyles.imageStyle}
-                  />
-                </Link>
-
                   <Link href={`/collection/${SLIDE_7}`}>
                   <Image
                     src={SLIDE_7_IMG}
@@ -435,16 +416,6 @@ export function Slideshow(){
                   />
                 </Link>
 
-                <Link href={`/collection/${SLIDE_6}`}>
-                  <Image
-                    src={SLIDE_6_IMG}
-                    width={250}
-                    height={250}
-                    alt="Market gm ☕️"
-                    className = {slideStyles.imageStyle}
-                  />
-                </Link>
-                
             </div>
 
             <div id="mySlides3" className={slideStyles.mySlides3}>
@@ -458,17 +429,6 @@ export function Slideshow(){
                     className = {slideStyles.imageStyle}
                   />
                 </Link>
-
-                  <Link href={`/collection/${SLIDE_7}`}>
-                  <Image
-                    src={SLIDE_7_IMG}
-                    width={250}
-                    height={250}
-                    alt="Market gm ☕️"
-                    className = {slideStyles.imageStyle}
-                  />
-                </Link>
-          
                 
                   <Link href={`/collection/${SLIDE_8}`}>
                   <Image
