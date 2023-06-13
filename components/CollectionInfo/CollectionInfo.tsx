@@ -13,8 +13,8 @@ export const CollectionInfo = ({Nfts} : Props) => {
       return(  
         <>
             {(NFTs[0]?.contractMetadata.openSea.imageUrl) ?
-            <MediaRenderer src={`${NFTs[0]?.contractMetadata.openSea.imageUrl}`} className={styles.collectionInfoImg}/>
-            : <MediaRenderer src={`${NFTs[0]?.media[0]?.gateway}`} className={styles.collectionInfoImg}/>
+            <MediaRenderer src={`${NFTs[0]?.contractMetadata.openSea.imageUrl}`} className={styles.collectionInfoImg} width="285px"/>
+            : <MediaRenderer src={`${NFTs[0]?.media[0]?.gateway}`} className={styles.collectionInfoImg} width="285px"/>
             }
             <div className={styles.collectionInfoIcons}>
                 {(NFTs[0]?.contract.address === '0x8fba3ebe77d3371406a77eeaf40c89c1ed55364a' 
